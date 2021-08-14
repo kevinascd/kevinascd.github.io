@@ -1,0 +1,502 @@
+
+
+<!DOCTYPE html>
+<html lang="en" data-default-color-scheme=&#34;auto&#34;>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/favicon.png">
+  <link rel="icon" href="/img/favicon.png">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="description" content="This is my blog.I will write down what I know">
+  <meta name="author" content="Kevin">
+  <meta name="keywords" content="">
+  
+  <title>社会工程简要说明（ - Welcome to my world</title>
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" />
+
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/github-markdown-css@4.0.0/github-markdown.min.css" />
+  <link  rel="stylesheet" href="/lib/hint/hint.min.css" />
+
+  
+    
+    
+      
+      <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10.6.0/styles/github-gist.min.css" />
+    
+  
+
+  
+    <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+  
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_ba1fz6golrf.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_kmeydafke9r.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    var CONFIG = {"hostname":"kevinascd.github.io","root":"/","version":"1.8.10","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null}}};
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+
+<body>
+  <header style="height: 70vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand"
+       href="/">&nbsp;<strong>Know More, For The Better Fature </strong>&nbsp;</a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                Home
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                Archives
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                Categories
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                Tags
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                About
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" data-toggle="modal" data-target="#modalSearch">&nbsp;<i
+                class="iconfont icon-search"></i>&nbsp;</a>
+          </li>
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="banner" id="banner" parallax=true
+         style="background: url('/img/default.png') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="page-header text-center fade-in-up">
+            <span class="h2" id="subtitle" title="社会工程简要说明（">
+              
+            </span>
+
+            
+              <div class="mt-3">
+  
+  
+    <span class="post-meta">
+      <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+      <time datetime="2021-06-18 18:02" pubdate>
+        June 18, 2021 pm
+      </time>
+    </span>
+  
+</div>
+
+<div class="mt-1">
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-chart"></i>
+      2.1k 字
+    </span>
+  
+
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-clock-fill"></i>
+      
+      
+      21
+       分钟
+    </span>
+  
+
+  
+  
+</div>
+
+            
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none">社会工程简要说明（</h1>
+            
+            <div class="markdown-body">
+              <p><img src="https://pic1.zhimg.com/v2-924fb422a958987b8c285bab15c70c93_r.jpg?source=172ae18b" srcset="/img/loading.gif" lazyload alt="社会工程学汇总（收藏）"></p>
+<h1 id="行为心理学篇"><a href="#行为心理学篇" class="headerlink" title="行为心理学篇"></a>行为心理学篇</h1><p>1、人比较瘦的话，这个人一定很精明，你占不到他一点光。比较胖，则这个人心胸宽阔，不计较琐事。</p>
+<p>2、人比较矮的话，一定要高看它一眼，他一定会有所长处，值得你去学习。人比较高的话，此人一定可能存在高傲自满的状态。</p>
+<p>3、让一个人来握手的时候一定要注意他的举动，是左手还是右手相握，还有握的力度，时间等等，来观察此人是否尊重别人。</p>
+<p>4、“口头语”特别重要，一个人的随口说出来的话就可以看出一个人的素质所在。</p>
+<p>5、和人在一起，要学会多聆听，这样才能从说话看出人心。</p>
+<h3 id="看衣着打扮-读性格气质"><a href="#看衣着打扮-读性格气质" class="headerlink" title="看衣着打扮-读性格气质"></a>看衣着打扮-读性格气质</h3><p>1、一个人戴帽子，可以看出他对头部建立的形象。</p>
+<p>2、一个人化妆，说明她在细心雕刻自己的性格。</p>
+<p>3、从一个人的穿鞋，可以看出他对生活的品味。</p>
+<p>4、从服装可以看出一个人的品味。</p>
+<p>5、从香水，看透女人的内心，不同的味道不同的心理。</p>
+<h3 id="爱“屋”及“乌”-兴趣爱好识人心"><a href="#爱“屋”及“乌”-兴趣爱好识人心" class="headerlink" title="爱“屋”及“乌”-兴趣爱好识人心"></a>爱“屋”及“乌”-兴趣爱好识人心</h3><p>1、吃东西，可以影响一个人的心情，有时候心情很坏，吃到特别喜欢的会瞬间变好。</p>
+<p>2、读书，说明这个人很有品味。这个互联网电子书爆棚的时代，如果还看书，真的很有品味。</p>
+<p>3、旅游，喜欢旅游的人心态都特别好。</p>
+<p>4、做家务，喜欢做家务的人，可以反映出另一个自己。</p>
+<p>5、运动，喜欢的运动可以看出一个人的个性，比如打篮球，打乒乓球。</p>
+<p>（1）头部动作的心理解读</p>
+<p>a.低下头可以表示缺乏信心。如果是在别人赞扬时低下了头，他们可能是由于害羞或胆怯。</p>
+<p>b.触摸或揪着耳朵表明其内心犹豫不决</p>
+<p>c.一个真诚的微笑整个脸部肌肉都会动作，而虚伪的微笑通常只会使嘴唇起作用。</p>
+<p>d.下意识的倾头可以表明对某事或某人的兴趣，但过度倾斜的头部可能是同情的标志。</p>
+<p>e.当一个人在思考或思考时，通常会把手放在脸颊上。</p>
+<p>f.当听众点头时，这通常是一个积极的信息，并表明他们感兴趣并注意。但是，过度点头可能意味着听者失去了兴趣，他们在伪装</p>
+<p>g.向别人伸出下巴可能表示蔑视。</p>
+<p><img src="https://pic1.zhimg.com/v2-50bc3fe19a61453c96fbfaf96c5fa284_b.jpg" srcset="/img/loading.gif" lazyload></p>
+<p>（2）上半身动作心理解读</p>
+<p>a.向后推肩膀可以显示出力量和勇气（对他人和自己都如此）。</p>
+<p>b.张开双臂意味着人们乐于接近，愿意交谈。而无意识双臂交叉则通常表示不满。</p>
+<p>c.双手放在脖子后面，触摸颈部可以显示某人对正在发生的事情感兴趣</p>
+<p>e.手掌向上和向外表示积极和开放的心理状态。</p>
+<p>f.如果一个人的手指交错或手指尖压在一起，通常他们在思考。</p>
+<p><img src="https://pic1.zhimg.com/v2-e27cc89ee7148b1dc8f956c120760370_b.jpg" srcset="/img/loading.gif" lazyload></p>
+<p>（3）下半身动作心理解读</p>
+<p>a.把手放在你的臀部可以显示出渴望和准备（注意，有时后这也是侵略心理的信号）。</p>
+<p>b.双脚分开代表着支配和掌控的心理，同时当一个人坐着双腿张开时，则表明他们此时很有安全感</p>
+<p>c.双腿交叉意味着几件事：放松，舒适；紧张；厌烦或失去耐心——这取决于腿部肌肉的紧张程度。</p>
+<p>d.脚尖无意间指的方向代表你更感兴趣的方向。</p>
+<p>e.坐下时，如果一个脚踝位于另一条腿的膝盖上时，代表着强烈的自信。</p>
+<p><img src="https://pic2.zhimg.com/v2-bc471e8182ba7a0391c3c4111d680639_b.jpg" srcset="/img/loading.gif" lazyload></p>
+<p>（4）眼睛的心理解读</p>
+<p>a.眼神的下降可以表达恐惧，内疚，害羞或顺从。</p>
+<p>b.压低眉毛，眯起的眼睛表示某人正试图理解所说的内容</p>
+<p>c.如果感到紧张或试图去评价别人，人们往往更容易眨眼。</p>
+<p>d.如果你直视别人的眼睛，你就会表现出自信。</p>
+<p>e.如果你在谈话中被别人激怒了，一个常见的下意识的动作就是快速扫视对方。</p>
+<p>通过揣摩去分析心理，例如：（b.张开双臂意味着人们乐于接近，愿意交谈。而无意识双臂交叉则通常表示不满。）看见某公司前台正在张开双臂，就可以假装把自己水杯打翻，弄湿简历，并让前台帮忙重新打印一份（他肯定会打印的），把携带木马的U盘给他，插入电脑，就成公入侵了前台电脑，也就成功入侵了网络。</p>
+<h2 id="揣摩篇"><a href="#揣摩篇" class="headerlink" title="揣摩篇"></a>揣摩篇</h2><p>（鬼谷子原文）</p>
+<h5 id="1、必以其甚喜之时，往而极其欲也，其有欲也，不能隐其情。"><a href="#1、必以其甚喜之时，往而极其欲也，其有欲也，不能隐其情。" class="headerlink" title="1、必以其甚喜之时，往而极其欲也，其有欲也，不能隐其情。"></a>1、必以其甚喜之时，往而极其欲也，其有欲也，不能隐其情。</h5><p>☆释义：当年要游说他人时，应在对方最高兴的时候去游说，然后继续使其愿望极度膨胀。只要对方有欲望，他就不愿隐瞒事物的真实情况。俗话说，人逢喜事精神爽，说话也要看看对方心情好坏，且在对方心情好时，游说他人的效果更好。</p>
+<p>估计曾国藩也领悟透彻了鬼谷子的这句话，于是曾国藩说：“劝人不可指其过，须先美其长。人喜则语言易入，怒则语言难入，怒胜私故也”，意思就是说：要劝谏他人过错时，先要表扬他人的优点长处，他人一高兴，你再说话就会效果更好，事半功倍！所以，我们学习鬼谷子揣摩人心的第一种方法，那就是在他人高兴时候和他交流，并说好听话让他更加膨胀，然后我们就可以看透他的真心，继而驾驭人心了</p>
+<h5 id="2、必以其甚惧之时，往而极其恶也，具有恶也，不能隐其情：情欲必知其变。"><a href="#2、必以其甚惧之时，往而极其恶也，具有恶也，不能隐其情：情欲必知其变。" class="headerlink" title="2、必以其甚惧之时，往而极其恶也，具有恶也，不能隐其情：情欲必知其变。"></a>2、必以其甚惧之时，往而极其恶也，具有恶也，不能隐其情：情欲必知其变。</h5><p>☆释义：在对方怀疑、戒惧时去做游说，一定要在对方对所厌恶的事情恨至极点时候再去。倘若对方有所厌恶的事，此时和他交流，他也不会隐瞒其真实情况。因为对方在有欲求的时候，常会反映在他们外在神态变化之中。这句话的意思和“上帝欲将你灭亡，先让你疯狂”有些相似，而这里所说的疯狂是让对方愤怒到疯狂！</p>
+<p>明知道他人非常生气某事，再在他人最生气的时候去拜访，然后继续火上浇油，别人肯定会毫无保留地将他心中怒火和不满，以及所有心思都倾诉给你，你掌握了他人的所思所想，也就可以驾驭人心了。鬼谷子的以上两种揣摩术都是利用了人性的弱点——情绪失控（大喜大怒），然后展开攻势，最后达到自己目的！</p>
+<h5 id="3、感动而不知其变者，乃且错其人勿与语，而更问所亲，知其所安。"><a href="#3、感动而不知其变者，乃且错其人勿与语，而更问所亲，知其所安。" class="headerlink" title="3、感动而不知其变者，乃且错其人勿与语，而更问所亲，知其所安。"></a>3、感动而不知其变者，乃且错其人勿与语，而更问所亲，知其所安。</h5><p>☆释义：如果对方有所感动，却不显露在外部神态中，可先不要着急，不要与他直面地讨论，可与他说一些另外他能熟悉的东西，说一些使他感到亲近的事情，就可以知道他安身立命不露神色的依据。这种方法就是用在那些喜怒不形于色的人身上，和他们谈某事，不要单刀直入，要学会婉转迂回，先打感情牌，用谈心来拉近彼此距离。</p>
+<p>鬼谷子知道，是人都有弱点，只是某些人比较善于伪装情绪罢了，所以我们要做的就是：说些他熟悉的事物，一步步打开他们的心扉！“是狐狸总会露出尾巴”，而那些心中有欲求的人，总会在不经意间表现在外部神态。这个时候我们就要仔细察言观色，最后探知他人心灵深处的欲求，然后根据他人的欲求去驾驭他们！</p>
+<p>注：要站在对方的角度考虑问题，解决事情往往简单的多。</p>
+
+            </div>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                
+              </div>
+              
+                <p class="note note-warning">
+                  
+                    本博客所有文章除特别声明外，均采用 <a target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" rel="nofollow noopener noopener">CC BY-SA 4.0 协议</a> ，转载请注明出处！
+                  
+                </p>
+              
+              
+                <div class="post-prevnext">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/2021/07/05/%E6%9E%84%E5%BB%BA%E6%B7%B1%E5%BA%A6%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C%EF%BC%8C%E6%88%91%E6%9C%8920%E6%9D%A1%E3%80%8C%E4%B8%8D%E6%88%90%E7%86%9F%E3%80%8D%E7%9A%84%E5%B0%8F%E5%BB%BA%E8%AE%AE-%E6%9C%BA%E5%99%A8%E4%B9%8B%E5%BF%83/">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">构建深度神经网络，我有20条「不成熟」的小建议 </span>
+                        <span class="visible-mobile">Previous</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2021/06/13/%E6%95%B0%E6%8D%AE%E6%8C%96%E6%8E%98/">
+                        <span class="hidden-mobile">数据挖掘概要</span>
+                        <span class="visible-mobile">Next</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
+    </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;TOC</p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+
+    
+
+    
+      <a id="scroll-top-button" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">Search</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">keyword</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+
+    
+  </main>
+
+  <footer class="text-center mt-5 py-3">
+  <div class="footer-content">
+     <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+  </div>
+  
+
+  
+
+  
+</footer>
+
+
+  <!-- SCRIPTS -->
+  
+  <script  src="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js" ></script>
+<script  src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+<!-- Plugins -->
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+  
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/tocbot@4.12.2/dist/tocbot.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/anchor-js@4.3.0/anchor.min.js" ></script>
+
+
+
+  <script defer src="https://cdn.jsdelivr.net/npm/clipboard@2.0.8/dist/clipboard.min.js" ></script>
+
+
+
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11/lib/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var title = document.getElementById('subtitle').title;
+      
+      typing(title)
+      
+    })(window, document);
+  </script>
+
+
+
+  <script  src="/js/local-search.js" ></script>
+  <script>
+    (function () {
+      var path = "/local-search.xml";
+      $('#local-search-input').on('click', function() {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      });
+      $('#modalSearch').on('shown.bs.modal', function() {
+        $('#local-search-input').focus();
+      });
+    })()
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+
+
+
+<!-- 主题的启动项 保持在最底部 -->
+<script  src="/js/boot.js" ></script>
+
+
+</body>
+</html>

@@ -1,0 +1,592 @@
+
+
+<!DOCTYPE html>
+<html lang="en" data-default-color-scheme=&#34;auto&#34;>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/favicon.png">
+  <link rel="icon" href="/img/favicon.png">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="description" content="This is my blog.I will write down what I know">
+  <meta name="author" content="Kevin">
+  <meta name="keywords" content="">
+  
+  <title>数据挖掘概要 - Welcome to my world</title>
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" />
+
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/github-markdown-css@4.0.0/github-markdown.min.css" />
+  <link  rel="stylesheet" href="/lib/hint/hint.min.css" />
+
+  
+    
+    
+      
+      <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10.6.0/styles/github-gist.min.css" />
+    
+  
+
+  
+    <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+  
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_ba1fz6golrf.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_kmeydafke9r.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    var CONFIG = {"hostname":"kevinascd.github.io","root":"/","version":"1.8.10","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null}}};
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+
+<body>
+  <header style="height: 70vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand"
+       href="/">&nbsp;<strong>Know More, For The Better Fature </strong>&nbsp;</a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                Home
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                Archives
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                Categories
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                Tags
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                About
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" data-toggle="modal" data-target="#modalSearch">&nbsp;<i
+                class="iconfont icon-search"></i>&nbsp;</a>
+          </li>
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="banner" id="banner" parallax=true
+         style="background: url('/img/default.png') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="page-header text-center fade-in-up">
+            <span class="h2" id="subtitle" title="数据挖掘概要">
+              
+            </span>
+
+            
+              <div class="mt-3">
+  
+  
+    <span class="post-meta">
+      <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+      <time datetime="2021-06-13 15:10" pubdate>
+        June 13, 2021 pm
+      </time>
+    </span>
+  
+</div>
+
+<div class="mt-1">
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-chart"></i>
+      5k 字
+    </span>
+  
+
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-clock-fill"></i>
+      
+      
+      55
+       分钟
+    </span>
+  
+
+  
+  
+</div>
+
+            
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none">数据挖掘概要</h1>
+            
+            <div class="markdown-body">
+              <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>数据挖掘是通过对大量数据的清理及处理以发现信息，并应用于分类，推荐系统，预测等方面的过程。</p>
+<h2 id="一、数据挖掘过程"><a href="#一、数据挖掘过程" class="headerlink" title="一、数据挖掘过程"></a>一、数据挖掘过程</h2><p>1.数据选择</p>
+<p>分析业务需求后，选择应用于需求业务相关的数据：业务原始数据、公开的数据集、也可通过爬虫采集网站结构化的数据。明确业务需求并选择好针对性的数据是数据挖掘的先决条件。</p>
+<p>2.数据预处理</p>
+<p>通常选择好的数据会有噪音，不完整等缺陷，需要对数据进行清洗，缺失项处理，集成，转换以及归纳： python字符串处理（相当方便）、正则式匹配、pandas、beautifulsoup处理Html标签等等工具。</p>
+<p>3.特征工程/数据转换</p>
+<p>根据选择的算法，对预处理好的数据提取特征，并转换为特定数据挖掘算法的分析模型。</p>
+<p>4.数据挖掘</p>
+<p>使用选择好的数据挖掘算法对数据进行处理后得到信息。</p>
+<p>5.解释与评价</p>
+<p>对数据挖掘后的信息加以分析解释，并应用于实际的工作领域。</p>
+<h2 id="二、数据挖掘常用算法简介"><a href="#二、数据挖掘常用算法简介" class="headerlink" title="二、数据挖掘常用算法简介"></a>二、数据挖掘常用算法简介</h2><h3 id="1-关联分析算法"><a href="#1-关联分析算法" class="headerlink" title="1.关联分析算法"></a>1.关联分析算法</h3><p>关联规则在于找出具有最小支持度阈值和最小置信度阈值的不同域的数据之间的关联。在关联规则的分析算法研究中，算法的效率是核心的问题。 经典的算法有：Apriori算法，AprioriTid算法，FP-growth算法；</p>
+<h3 id="2-分类算法"><a href="#2-分类算法" class="headerlink" title="2.分类算法"></a>2.分类算法</h3><p>决策树算法：以树形结构表示分类或者决策集合，产生规则或者发现规律。主要有ID3算法，C4.5算法， SLIQ算法， SPRINT算法， RainForest算法；</p>
+<p>朴素Bayes分类算法：利用Bayes定理概率统计的方法，选择其中概率比较大的类别进行分类；</p>
+<p>CBA(Classification Based on Association)算法：基于关联规则的分类算法；</p>
+<p>MIND(Mining in Database)算法 ：采用数据库中用户定义的函数(user-definedfunction，简称UDF)来实现分类的算法；</p>
+<p>神经网络分类算法：利用训练集对多个神经的网络进行训练，并用训练好的模型对样本进行分类；</p>
+<p>粗集理论：粗集理论的特点是不需要预先给定某些特征或属性的数量描述，而是直接从给定问题出发，通过不可分辨关系和不可分辨类确定问题的近似域,从而找出问题中的内在规律；</p>
+<p>遗传算法：遗传算法是模拟生物进化过程，利用复制(选择)、交叉(重组)和变异(突变)3个基本方法优化求解的技术；</p>
+<h3 id="3-聚类算法"><a href="#3-聚类算法" class="headerlink" title="3.聚类算法"></a>3.聚类算法</h3><p>聚类分析与分类不同，聚类分析处理的数据对象的类是未知的。聚类分析就是将对象集合分组为由类似的对象组成 的多个簇的过程。分为3类方法：</p>
+<p>Ipartitioning method(划分方法) 给定1个N个对象或者元组的数据库，1个划分方法构建数据的K个划分，每1个划分表示1个聚簇，并且K&lt;N。经典算法是K-MEAN(K平均值)；</p>
+<p>hierarchical method(层次方法) 对给定数据对象集合进行层次的分解，经典算法是BIRTH算法；</p>
+<p>grid based method(基于网格的方法) 这种方法采用一个多分辨率的网格数据结构。将空间量化为有限数目的单元，这些单元形成了网格结构，所有聚类分析都在网格上进行。常用的算法有STING，SkWAVECLUSTER和 CLIQUE；</p>
+<h3 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h3><p>随着数据量的日益积累以及数据库种类的多样化，各种数据挖掘方法作用范围有限，都有局限性，因此采用单一方法难以得到决策所需的各种知识。但它们的有机组合具有互补性，多方法融合将成为数据挖掘算法的发展趋势。</p>
+<h2 id="三、数据挖掘算法实现"><a href="#三、数据挖掘算法实现" class="headerlink" title="三、数据挖掘算法实现"></a>三、数据挖掘算法实现</h2><h3 id="1、相关知识"><a href="#1、相关知识" class="headerlink" title="1、相关知识"></a>1、相关知识</h3><h4 id="1-距离度量：在数据挖掘中需要明确样本数据相似度，通常可以计算样本间的距离，如下为常用距离度量的介绍。"><a href="#1-距离度量：在数据挖掘中需要明确样本数据相似度，通常可以计算样本间的距离，如下为常用距离度量的介绍。" class="headerlink" title="(1)距离度量：在数据挖掘中需要明确样本数据相似度，通常可以计算样本间的距离，如下为常用距离度量的介绍。"></a>(1)距离度量：在数据挖掘中需要明确样本数据相似度，通常可以计算样本间的距离，如下为常用距离度量的介绍。</h4><p>样本数据以：</p>
+<p><img src="https://user-gold-cdn.xitu.io/2018/9/6/165acaff8aac01cf?imageView2/0/w/1280/h/960/format/webp/ignore-error/1" srcset="/img/loading.gif" lazyload alt="样本数据"></p>
+<p><img src="https://user-gold-cdn.xitu.io/2018/9/6/165ad72a029f3d22?imageView2/0/w/1280/h/960/format/webp/ignore-error/1" srcset="/img/loading.gif" lazyload alt="坐标"></p>
+<p><strong>曼哈顿距离：</strong> 也称曼哈顿街区距离，就如从街区的一个十字路口点到另一个十字路口点的距离， 二维空间（多维空间按同理扩展）用公式表示为</p>
+<p><img src="https://user-gold-cdn.xitu.io/2018/9/6/165af852e320fea3?imageView2/0/w/1280/h/960/format/webp/ignore-error/1" srcset="/img/loading.gif" lazyload></p>
+<p><img src="https://user-gold-cdn.xitu.io/2018/9/6/165af7c0321440e0?imageView2/0/w/1280/h/960/format/webp/ignore-error/1" srcset="/img/loading.gif" lazyload></p>
+<p><strong>欧氏距离</strong>：表示为点到点的距离。二维空间（多维空间按同理扩展）的公式表示为</p>
+<p><img src="https://user-gold-cdn.xitu.io/2018/9/6/165af8375b661141?imageView2/0/w/1280/h/960/format/webp/ignore-error/1" srcset="/img/loading.gif" lazyload></p>
+<p><img src="https://user-gold-cdn.xitu.io/2018/9/6/165af84b783a086b?imageView2/0/w/1280/h/960/format/webp/ignore-error/1" srcset="/img/loading.gif" lazyload></p>
+<p><strong>闵可夫斯基距离</strong>：是一组距离方法的概括，当 p=1 既是曼哈顿距离，当 p=2 既是欧氏距离。当p越大，单一维度的差值对整体的影响就越大。</p>
+<p><img src="https://user-gold-cdn.xitu.io/2018/9/6/165af8eebd55abee?imageView2/0/w/1280/h/960/format/webp/ignore-error/1" srcset="/img/loading.gif" lazyload></p>
+<p>闵可夫斯基距离（包括欧氏距离，曼哈顿距离）的优缺点：</p>
+<p>优点：应用广泛。</p>
+<p>缺点：无法考虑各分量的单位以及各分量分布（方差，期望）的差异性。（其中个分量的单位差异可以使用数据的标准化来消除，下面会有介绍。）</p>
+<p><strong>余弦相关系数</strong>：样本数据视为向量，通过两向量间的夹角余弦值确认相关性，数值范围[-1，1]。 -1表示负相关，0表示无关，1表示正相关。</p>
+<p><img src="https://user-gold-cdn.xitu.io/2018/9/7/165b211e1adf40e8?imageView2/0/w/1280/h/960/format/webp/ignore-error/1" srcset="/img/loading.gif" lazyload></p>
+<p>余弦相关系数的优缺点：</p>
+<p>优点：余弦相似度与向量的幅值无关，只与向量的方向相关，在文档相似度（TF-IDF）和图片相似性（histogram）计算上都有它的身影； 而且在样本数值稀疏的时候仍可以使用。</p>
+<p>缺点：余弦相似度受到向量的平移影响，上式如果将 x 平移到 x+1, 余弦值就会改变。(可以理解为受样本的起始标准的影响，接下来介绍的皮尔逊相关系数可以消除这个影响)</p>
+<p><strong>皮尔逊相关系数</strong>：计算出了样本向量间的相关性，数值范围[-1，1]。</p>
+<p><img src="https://user-gold-cdn.xitu.io/2018/9/7/165b29dfceee4ae8?imageView2/0/w/1280/h/960/format/webp/ignore-error/1" srcset="/img/loading.gif" lazyload></p>
+<p>考虑计算的遍历的次数，有一个替代公式可以近似计算皮尔逊相关系数：</p>
+<p><img src="https://user-gold-cdn.xitu.io/2018/9/7/165b2a5756a5a4a3?imageView2/0/w/1280/h/960/format/webp/ignore-error/1" srcset="/img/loading.gif" lazyload></p>
+<p>皮尔逊相关系数优点：可消除每个分量标准不同（分数膨胀）的影响，具有平移不变性和尺度不变性。</p>
+<h4 id="2-数据标准化：参考文章"><a href="#2-数据标准化：参考文章" class="headerlink" title="(2)数据标准化：参考文章"></a>(2)数据标准化：<a target="_blank" rel="noopener" href="https://blog.csdn.net/zenghaitao0128/article/details/78361038">参考文章</a></h4><p>各分量计算距离而各分量的单位尺度差异很大，可以使用数据标准化消除不同分量间单位尺度的影响，，加速模型收敛的效率，常用的方法有三种：</p>
+<p><strong>min-max 标准化</strong>：将数值范围缩放到（0,1）,但没有改变数据分布。max为样本最大值，min为样本最小值。</p>
+<p><img src="https://user-gold-cdn.xitu.io/2018/9/7/165b2bdd4a7cd845?imageView2/0/w/1280/h/960/format/webp/ignore-error/1" srcset="/img/loading.gif" lazyload></p>
+<p><strong>z-score 标准化</strong>：将数值范围缩放到0附近, 经过处理的数据符合标准正态分布。u是平均值，σ是标准差。</p>
+<p><img src="https://user-gold-cdn.xitu.io/2018/9/7/165b2bc6bd1995f7?imageView2/0/w/1280/h/960/format/webp/ignore-error/1" srcset="/img/loading.gif" lazyload></p>
+<p><strong>修正的标准z-score</strong>：修正后可以减少样本数据异常值的影响。将z-score标准化公式中的均值改为中位数，将标准差改为绝对偏差。</p>
+<p><img src="https://user-gold-cdn.xitu.io/2018/9/13/165d1d0e453e3047?imageView2/0/w/1280/h/960/format/webp/ignore-error/1" srcset="/img/loading.gif" lazyload></p>
+<p>其中asd绝对偏差：u为中位数，card(x)为样本个数</p>
+<p><img src="https://user-gold-cdn.xitu.io/2018/9/13/165d19a89ad874e4?imageView2/0/w/1280/h/960/format/webp/ignore-error/1" srcset="/img/loading.gif" lazyload></p>
+<h4 id="3-算法的效果评估："><a href="#3-算法的效果评估：" class="headerlink" title="(3) 算法的效果评估："></a>(3) 算法的效果评估：</h4><p>十折交叉验证：将数据集随机分割成十个等份，每次用9份数据做训练集，1份数据做测试集，如此迭代10次。十折交叉验证的关键在于较平均地分为10份。</p>
+<p>N折交叉验证又称为留一法：用几乎所有的数据进行训练，然后留一个数据进行测试，并迭代每一数据测试。留一法的优点是：确定性。</p>
+<h3 id="2、协同过滤推荐算法"><a href="#2、协同过滤推荐算法" class="headerlink" title="2、协同过滤推荐算法"></a>2、协同过滤推荐算法</h3><h4 id="代码实现、数据集及参考论文-电影推荐——基于用户、物品的协同过滤算法"><a href="#代码实现、数据集及参考论文-电影推荐——基于用户、物品的协同过滤算法" class="headerlink" title="代码实现、数据集及参考论文 电影推荐——基于用户、物品的协同过滤算法"></a>代码实现、数据集及参考论文 <a target="_blank" rel="noopener" href="https://github.com/liaoyongyu/datamining/tree/master/recommendation_algorithms">电影推荐——基于用户、物品的协同过滤算法</a></h4><figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs routeros"><span class="hljs-built_in">..</span>. 示例： r = Recommendor() <span class="hljs-builtin-name">print</span>(<span class="hljs-string">&quot;items base协同推荐 slope one&quot;</span>) #items base协同推荐算法 Slope one r.slope\_one\_recommendation(<span class="hljs-string">&#x27;lyy&#x27;</span>) <span class="hljs-builtin-name">print</span>(<span class="hljs-string">&quot;items base协同推荐 cos&quot;</span>) #items base协同推荐算法  修正余弦相似度  r.cos\_recommendation(<span class="hljs-string">&#x27;lyy&#x27;</span>) <span class="hljs-builtin-name">print</span>(<span class="hljs-string">&quot;users base协同推荐&quot;</span>) #userbase协同推荐算法  r.user\_base_recommendation(<span class="hljs-string">&quot;lyy&quot;</span>) 复制代码<br></code></pre></td></tr></table></figure>
+
+<h4 id="1-基于用户的协同推荐算法"><a href="#1-基于用户的协同推荐算法" class="headerlink" title="(1)基于用户的协同推荐算法"></a>(1)基于用户的协同推荐算法</h4><p>这个方法是利用相似用户的喜好来进行推荐：如果要推荐一个乐队给你，会查找一个和你类似的用户，然后将他喜欢的乐队推荐给你。</p>
+<p>算法的关键在于找到相似的用户，迭代计算你与每个用户对相同乐队的评分距离，来确定谁是你最相似的用户，距离计算可以用曼哈顿距离，皮尔斯相关系数等等。</p>
+<p><img src="https://user-gold-cdn.xitu.io/2018/9/7/165b33cfd31f1d8a?imageView2/0/w/1280/h/960/format/webp/ignore-error/1" srcset="/img/loading.gif" lazyload></p>
+<p>基于用户的协同推荐算法算法的缺点：</p>
+<p>扩展性：随着用户数量的增加，其计算量也会增加。这种算法在只有几千个用户的情况下能够工作得很好，但达到一百万个用户时就会出现瓶颈。稀疏性：大多数推荐系统中，物品的数量要远大于用户的数量，因此用户仅仅对一小部分物品进行了评价，这就造成了数据的稀疏性。比如亚马逊有上百万本书，但用户只评论了很少一部分，于是就很难找到两个相似的用户了。</p>
+<h4 id="2-基于物品的协同推荐算法"><a href="#2-基于物品的协同推荐算法" class="headerlink" title="(2)基于物品的协同推荐算法"></a>(2)基于物品的协同推荐算法</h4><p>基于用户的协同过滤是通过计算用户之间的距离找出最相似的用户（需要将所有的评价数据在读取在内存中处理进行推荐），并将相似用户评价过的物品推荐给目标用户。而基于物品的协同过滤则是找出最相似的物品（通过构建一个物品的相似度模型来做推荐），再结合用户的评价来给出推荐结果。</p>
+<p>基于物品的协同推荐算法常用有如下两种：</p>
+<h4 id="修正余弦相似度算法："><a href="#修正余弦相似度算法：" class="headerlink" title="修正余弦相似度算法："></a>修正余弦相似度算法：</h4><p>以物品的评分作为物品的属性值，通过对比物品i,j的工有的用户相对评分的计算相关性s(i,j)。与皮尔逊相关系数的原理相同，共有用户对物品的每一评分R(u,j)，R(u,i)需要减去该用户评分的平均值R(`u)而消除分数膨胀。</p>
+<p><img src="https://user-gold-cdn.xitu.io/2018/9/7/165b4596a0bf0e1f?imageView2/0/w/1280/h/960/format/webp/ignore-error/1" srcset="/img/loading.gif" lazyload></p>
+<p>修正余弦相似度的优点：通过构建物品模型的方式，扩展性好，占用内存小；消除分数膨胀的影响；</p>
+<p>修正余弦相似度的缺点：稀疏性，需要基于用户的评分数据；</p>
+<h4 id="Slope-One推荐算法："><a href="#Slope-One推荐算法：" class="headerlink" title="Slope One推荐算法："></a>Slope One推荐算法：</h4><p>第一步，计算平均差值：</p>
+<p>dev(i,j)为遍历所有共有物品i，j的共有用户u的评分平均差异。</p>
+<p>card(Sj,i(X))则表示同时评价过物品j和i的用户数。</p>
+<p><img src="https://user-gold-cdn.xitu.io/2018/9/7/165b456e6ef82636?imageView2/0/w/1280/h/960/format/webp/ignore-error/1" srcset="/img/loading.gif" lazyload alt="slopeone"></p>
+<p>第二歩，使用加权的Slope One算法：</p>
+<p>PWS1(u)j表示我们将预测用户u对物品j的评分。</p>
+<p>求合集i属于S(u)-j,用户u所含的所有物品i（除了j以外）。</p>
+<p>dev(i,j)为遍历所有共有物品i，j的共有用户u的评分平均差异。</p>
+<p>C(ji)也就是card(Sj,i(X))表示同时评价过物品j和i的用户数。</p>
+<p><img src="https://user-gold-cdn.xitu.io/2018/9/9/165bd05c5b75f331?imageView2/0/w/1280/h/960/format/webp/ignore-error/1" srcset="/img/loading.gif" lazyload></p>
+<p>Slope One算法优点：算法简单；扩展性好，只需要更新共有属性的用户评价，而不需要重新载入整个数据集。</p>
+<p>Slope One算法的缺点：稀疏性，需要基于用户的评分数据；</p>
+<h3 id="3、分类算法"><a href="#3、分类算法" class="headerlink" title="3、分类算法"></a>3、分类算法</h3><h4 id="1-基于物品特征值的KNN分类算法"><a href="#1-基于物品特征值的KNN分类算法" class="headerlink" title="(1)基于物品特征值的KNN分类算法"></a>(1)基于物品特征值的KNN分类算法</h4><h4 id="代码实现-鸢尾花KNN分类算法"><a href="#代码实现-鸢尾花KNN分类算法" class="headerlink" title="代码实现 鸢尾花KNN分类算法"></a>代码实现 <a target="_blank" rel="noopener" href="https://github.com/liaoyongyu/datamining/tree/master/classify/KNN/">鸢尾花KNN分类算法</a></h4><figure class="highlight taggerscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs taggerscript">...  # KNN算法     def knn(self, oj<span class="hljs-symbol">\_</span>list):         weight<span class="hljs-symbol">\_</span>dict = &#123;&quot;Iris-setosa&quot;:0.0, &quot;Iris-versicolor&quot;:0.0, &quot;Iris-virginica&quot;:0.0&#125;         for atuple in oj<span class="hljs-symbol">\_</span>list:             weight<span class="hljs-symbol">\_</span>dict<span class="hljs-symbol">\[</span>atuple<span class="hljs-symbol">\[</span>1<span class="hljs-symbol">\]</span><span class="hljs-symbol">\]</span> += (1.0 / atuple<span class="hljs-symbol">\[</span>0<span class="hljs-symbol">\]</span>)         rel<span class="hljs-symbol">\_</span>class = <span class="hljs-symbol">\[</span>(key, value) for key, value in weight<span class="hljs-symbol">\_</span>dict.items()<span class="hljs-symbol">\]</span>         #print(sorted(rel<span class="hljs-symbol">\_</span>class, key=lambda x:x<span class="hljs-symbol">\[</span>1<span class="hljs-symbol">\]</span>, reverse=True))         rel<span class="hljs-symbol">\_</span>class = sorted(rel<span class="hljs-symbol">\_</span>class, key=lambda x:x<span class="hljs-symbol">\[</span>1<span class="hljs-symbol">\]</span>, reverse=True)<span class="hljs-symbol">\[</span>0<span class="hljs-symbol">\]</span><span class="hljs-symbol">\[</span>0<span class="hljs-symbol">\]</span>         return rel<span class="hljs-symbol">\_</span>class          ... 复制代码<br></code></pre></td></tr></table></figure>
+
+<p>前面我们讨论的协同推荐算法需要在用户产生的各种数据上面进行分析，因此也称为社会化过滤算法，而这种算法通常有数据的稀疏性，算法可扩展性以及依赖于用户的数据的缺点，而基于物品特征值分类算法可以改善这些问题。算法分为两步：</p>
+<p>第一步、选取特征值</p>
+<p>算法的关键在于挑取有代表区分意义的特征及分值。以Iris花的示例，选取花萼长度， 花萼宽度，花瓣长度，花瓣宽度特征值。</p>
+<p><img src="https://user-gold-cdn.xitu.io/2018/9/10/165c3bc0f875a4f2?imageView2/0/w/1280/h/960/format/webp/ignore-error/1" srcset="/img/loading.gif" lazyload></p>
+<p>第二歩、计算距离</p>
+<p>比如计算测试集与训练集特征值之间的曼哈顿距离，得到k个最近邻后并通过加权后的结果预测分类。</p>
+<p>KNN分类算法的缺点：无法对分类结果的置信度进行量化；是被动学习的算法，每次测试需要需要遍历所有的训练集后才能分类。</p>
+<h4 id="2-贝叶斯分类算法"><a href="#2-贝叶斯分类算法" class="headerlink" title="(2)贝叶斯分类算法"></a>(2)贝叶斯分类算法</h4><h4 id="代码实现-区分新闻类别朴素贝叶斯分类算法"><a href="#代码实现-区分新闻类别朴素贝叶斯分类算法" class="headerlink" title="代码实现 区分新闻类别朴素贝叶斯分类算法"></a>代码实现 <a target="_blank" rel="noopener" href="https://github.com/liaoyongyu/datamining/blob/master/classify/Bayes/">区分新闻类别朴素贝叶斯分类算法</a></h4><figure class="highlight taggerscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs taggerscript">... def train_data(self):         #训练组的条件概率         for word in self.vocabulary:             for category,value in self.prob.items():                 if word not in self.prob<span class="hljs-symbol">\[</span>category<span class="hljs-symbol">\]</span>:                     count = 0                 else :                     count = self.prob<span class="hljs-symbol">\[</span>category<span class="hljs-symbol">\]</span><span class="hljs-symbol">\[</span>word<span class="hljs-symbol">\]</span>                 #优化条件概率公式                 self.prob<span class="hljs-symbol">\[</span>category<span class="hljs-symbol">\]</span><span class="hljs-symbol">\[</span>word<span class="hljs-symbol">\]</span> = (count + 1) / (self.total<span class="hljs-symbol">\[</span>category<span class="hljs-symbol">\]</span> + len(self.vocabulary))                   ... 复制代码<br></code></pre></td></tr></table></figure>
+
+<p>贝叶斯分类算法是基于概率的分类算法。相比于KNN分类算法，它是主动学习的算法，它会根据训练集建立一个模型，并用这个模型对新样本进行分类，速度也会快很多。 贝叶斯分类算法的理论基础是基于条件概率的公式（应用于现实中P(X|Y&amp;Z)不直观得出，而P(Y|X)*P(Z|X)比较直观得出），并假设已存在的子事件(y,z…实际应用中会有多个)间是相互独立的（因此也称为朴素贝叶斯），当y，z事件假设为独立便有：</p>
+<p><img src="https://user-gold-cdn.xitu.io/2018/9/12/165cb97ac388a376?imageView2/0/w/1280/h/960/format/webp/ignore-error/1" srcset="/img/loading.gif" lazyload></p>
+<p>如下举例推测买牛奶和有机食品，再会买绿茶的概率：</p>
+<p><img src="https://user-gold-cdn.xitu.io/2018/9/13/165d1ff2e5208d1e?imageView2/0/w/1280/h/960/format/webp/ignore-error/1" srcset="/img/loading.gif" lazyload></p>
+<p>第一步：计算先验概率及条件概率</p>
+<p>先验概率：为单独事件发生的概率，如P(买绿茶)，P(有机食品)</p>
+<p>条件概率（后验概率）：y事件已经发生，观察y数据集后得出x发生的概率。如P(买有机食品|买绿茶)，通过以下公式计算（nc表示y数据集下x的发生频数，n为y数据集的总数）：</p>
+<p><img src="https://user-gold-cdn.xitu.io/2018/9/12/165cb8547529dd0e?imageView2/0/w/1280/h/960/format/webp/ignore-error/1" srcset="/img/loading.gif" lazyload></p>
+<p>上式存在一个缺陷，当一个条件概率 P(y|x)为0时，整体的预测结果P(x) * P(y|x) * P(z|x)只能为0，这样便不能更全面地预测。</p>
+<p>修正后的条件概率：（公式摘自Tom Mitchell《机器学习》。m是一个常数，表示等效样本大小。决定常数m的方法有很多，我们这里可以使用预测结果的类别来作为m，比如投票有赞成和否决两种类别，所以m就为2。p则是相应的先验概率，比如说赞成概率是0.5，那p(赞成)就是0.5。）：</p>
+<p><img src="https://user-gold-cdn.xitu.io/2018/9/12/165cb83cfc13aaf1?imageView2/0/w/1280/h/960/format/webp/ignore-error/1" srcset="/img/loading.gif" lazyload></p>
+<p>第二歩：根据贝叶斯公式做出预测</p>
+<p><img src="https://user-gold-cdn.xitu.io/2018/9/12/165cb98290a241b9?imageView2/0/w/1280/h/960/format/webp/ignore-error/1" srcset="/img/loading.gif" lazyload></p>
+<p>由公式计算比较y&amp;z事件发生下，不同x事件发生的概率差异，如得出P（x=喜欢），P（x=不喜欢） 的概率大小，预测为概率比较大的事件。 因为P(y)*p(z)在上式都一样，因此公式可以简化为计算概率最大项而预测分类：</p>
+<p><img src="https://user-gold-cdn.xitu.io/2018/9/12/165cba5c9f486819?imageView2/0/w/1280/h/960/format/webp/ignore-error/1" srcset="/img/loading.gif" lazyload></p>
+<p>贝叶斯算法的优点：能够给出分类结果的置信度；它是一种主动学习算法，速度更快。</p>
+<p>贝叶斯算法的缺点：需要特定格式；数值型数据需要转换为类别计算概率或用高斯分布计算概率；</p>
+<h4 id="2-逻辑回归分类算法"><a href="#2-逻辑回归分类算法" class="headerlink" title="(2)逻辑回归分类算法"></a>(2)逻辑回归分类算法</h4><h4 id="代码实现-区分猫的图片"><a href="#代码实现-区分猫的图片" class="headerlink" title="代码实现 区分猫的图片"></a>代码实现 <a target="_blank" rel="noopener" href="https://github.com/liaoyongyu/datamining/tree/master/classify/NeutralNetwork">区分猫的图片</a></h4><p>注：逻辑回归分类算法待后续加入网络层，更新为神经网络分类算法。</p>
+<figure class="highlight maxima"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs maxima">... # cost函数，计算梯度 def propagate(w, b, X, Y):     m = X.shape\[<span class="hljs-number">1</span>\]           A = sigmoid(<span class="hljs-built_in">np</span>.dot(w.T, X) + b)                 cost = -<span class="hljs-number">1</span> / m * <span class="hljs-built_in">np</span>.<span class="hljs-built_in">sum</span>(Y * <span class="hljs-built_in">np</span>.<span class="hljs-built_in">log</span>(A) + (<span class="hljs-number">1</span> - Y) * <span class="hljs-built_in">np</span>.<span class="hljs-built_in">log</span>(<span class="hljs-number">1</span> - A))             dw = <span class="hljs-number">1</span> / m * <span class="hljs-built_in">np</span>.dot(X, (A - Y).T)       db = <span class="hljs-number">1</span> / m * <span class="hljs-built_in">np</span>.<span class="hljs-built_in">sum</span>(A - Y)  ...     复制代码<br></code></pre></td></tr></table></figure>
+
+<p>逻辑回归分类算法实现了输入特征向量X，而输出Y（范围0~1）预测X的分类。</p>
+<p>第一步，得到关于X线性回归函数</p>
+<p>可以通过线性回归得到WX + b，其中W是权重，b是偏差值。但不能用本式表述预测的值，因为输出Y的值需要在（0~1）区间；</p>
+<p>第二歩，通过激活函数转换</p>
+<p>激活函数的特点是可以将线性函数转换为非线性函数，并且有输出值有限，可微分，单调性的特点。本例使用sigmoid，使输出为预测值Y=sigmoid（WX+b）；</p>
+<p>第三歩，构建Cost函数</p>
+<p>训练W，b更好的预测真实的类别需要构建Cost代价函数，y^为sigmoid(WX+b)的预测分类值，y为实际分类值（0或者1）：</p>
+<p><img src="https://user-gold-cdn.xitu.io/2018/9/12/165cdb16135ada50?imageView2/0/w/1280/h/960/format/webp/ignore-error/1" srcset="/img/loading.gif" lazyload></p>
+<p>其中L(y^,y)称为损失函数</p>
+<p><img src="https://user-gold-cdn.xitu.io/2018/9/12/165cdba3f27220e1?imageView2/0/w/1280/h/960/format/webp/ignore-error/1" srcset="/img/loading.gif" lazyload></p>
+<p>训练的目的就是为了让L(y^,y)足够小，也就是当y实际分类值为1时，y^要尽量偏向1。y实际分类值为0时，y^尽量小接近0。</p>
+<p>第四步，梯度下降得到Cost函数的极小值</p>
+<p><img src="https://user-gold-cdn.xitu.io/2018/9/12/165cdc1436948f7a?imageView2/0/w/1280/h/960/format/webp/ignore-error/1" srcset="/img/loading.gif" lazyload></p>
+<p>通过对W,b两个参数求偏导，不断迭代往下坡的的位置移动（对w，b值往极小值方向做优化，其中α为学习率控制下降的幅度），全局最优解也就是代价函数（成本函数）J (w,b)这个凸函数的极小值点。</p>
+<p><img src="https://user-gold-cdn.xitu.io/2018/9/12/165cdc3fca61705f?imageView2/0/w/1280/h/960/format/webp/ignore-error/1" srcset="/img/loading.gif" lazyload></p>
+<p>第五步、通过训练好的W,b预测分类。</p>
+<p><img src="https://user-gold-cdn.xitu.io/2018/9/12/165cd7df7fd9b48c?imageView2/0/w/1280/h/960/format/webp/ignore-error/1" srcset="/img/loading.gif" lazyload></p>
+<h3 id="4、聚类算法"><a href="#4、聚类算法" class="headerlink" title="4、聚类算法"></a>4、聚类算法</h3><h4 id="1-层次聚类"><a href="#1-层次聚类" class="headerlink" title="(1)层次聚类"></a>(1)层次聚类</h4><h4 id="代码实现-狗的种类层次聚类"><a href="#代码实现-狗的种类层次聚类" class="headerlink" title="代码实现 狗的种类层次聚类"></a>代码实现 <a target="_blank" rel="noopener" href="https://github.com/liaoyongyu/datamining/tree/master/cluster/hierarchical%20method">狗的种类层次聚类</a></h4><p>层次聚类将每条数据都当作是一个分类，每次迭代的时候合并距离最近的两个分类，直到剩下一个分类为止。</p>
+<h4 id="2-K-means-聚类"><a href="#2-K-means-聚类" class="headerlink" title="(2)K-means++聚类"></a>(2)K-means++聚类</h4><h4 id="代码实现-Kmean-聚类"><a href="#代码实现-Kmean-聚类" class="headerlink" title="代码实现 Kmean++聚类"></a>代码实现 <a target="_blank" rel="noopener" href="https://github.com/liaoyongyu/datamining/blob/master/cluster/Ipartitioning%20method/kmeanpp.py">Kmean++聚类</a></h4><p>注：Kmean算法与Kmean++区别在于初始的中心点是直接随机选取k各点。</p>
+<figure class="highlight taggerscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs taggerscript">        ...         #kmean初始化随机k个中心点         #random.seed(1)         #center = <span class="hljs-symbol">\[</span><span class="hljs-symbol">\[</span>self.data<span class="hljs-symbol">\[</span>i<span class="hljs-symbol">\]</span><span class="hljs-symbol">\[</span>r<span class="hljs-symbol">\]</span> for i in range(1, len((self.data)))<span class="hljs-symbol">\]</span>                     #for r in random.sample(range(len(self.data)), k)<span class="hljs-symbol">\]</span>                      # Kmean ++ 初始化基于距离份量随机选k个中心点         # 1.随机选择一个点         center = <span class="hljs-symbol">\[</span><span class="hljs-symbol">\]</span>         center.append(random.choice(range(len(self.data<span class="hljs-symbol">\[</span>0<span class="hljs-symbol">\]</span>))))         # 2.根据距离的概率选择其他中心点         for i in range(self.k - 1):             weights = <span class="hljs-symbol">\[</span>self.distance_closest(self.data<span class="hljs-symbol">\[</span>0<span class="hljs-symbol">\]</span><span class="hljs-symbol">\[</span>x<span class="hljs-symbol">\]</span>, center)                       for x in range(len(self.data<span class="hljs-symbol">\[</span>0<span class="hljs-symbol">\]</span>)) if x not in center<span class="hljs-symbol">\]</span>             dp = <span class="hljs-symbol">\[</span>x for x in range(len(self.data<span class="hljs-symbol">\[</span>0<span class="hljs-symbol">\]</span>)) if x not in center<span class="hljs-symbol">\]</span>             total = sum(weights)             #基于距离设定权重             weights = <span class="hljs-symbol">\[</span>weight/total for weight in weights<span class="hljs-symbol">\]</span>             num = random.random()             x = -1             i = 0             while i &lt; num :                 x += 1                 i += weights<span class="hljs-symbol">\[</span>x<span class="hljs-symbol">\]</span>             center.append(dp<span class="hljs-symbol">\[</span>x<span class="hljs-symbol">\]</span>)         ...  复制代码<br></code></pre></td></tr></table></figure>
+
+<p>k-means++算法可概括为：</p>
+<p>（1）基于各点到中心点得距离分量，依次随机选取到k个元素作为中心点： 先随机选择一个点。重复以下步骤，直到选完k个点。</p>
+<p>计算每个数据点dp(n)到各个中心点的距离（D），选取最小的值D(dp)；</p>
+<p><img src="https://user-gold-cdn.xitu.io/2018/9/20/165f5eafc5c036a9?imageView2/0/w/1280/h/960/format/webp/ignore-error/1" srcset="/img/loading.gif" lazyload></p>
+<p>根据D(dp)距离所占的份量来随机选取下一个点作为中心点。</p>
+<p><img src="https://user-gold-cdn.xitu.io/2018/9/20/165f5eb1eb0f4f7e?imageView2/0/w/1280/h/960/format/webp/ignore-error/1" srcset="/img/loading.gif" lazyload></p>
+<p>（2）根据各点到中心点的距离分类；</p>
+<p>（3）计算各个分类新的中心点。 重复(2、3)，直至满足条件。</p>
+
+            </div>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                
+              </div>
+              
+                <p class="note note-warning">
+                  
+                    本博客所有文章除特别声明外，均采用 <a target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" rel="nofollow noopener noopener">CC BY-SA 4.0 协议</a> ，转载请注明出处！
+                  
+                </p>
+              
+              
+                <div class="post-prevnext">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/2021/06/18/%E7%A4%BE%E4%BC%9A%E5%B7%A5%E7%A8%8B%E7%AE%80%E8%A6%81%E8%AF%B4%E6%98%8E/">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">社会工程简要说明（</span>
+                        <span class="visible-mobile">Previous</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2021/05/16/2020-%E5%9B%BD%E8%B5%9B%E5%88%9D%E8%B5%9B/">
+                        <span class="hidden-mobile">关于微表情的一些看法</span>
+                        <span class="visible-mobile">Next</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
+    </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;TOC</p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+
+    
+
+    
+      <a id="scroll-top-button" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">Search</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">keyword</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+
+    
+  </main>
+
+  <footer class="text-center mt-5 py-3">
+  <div class="footer-content">
+     <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+  </div>
+  
+
+  
+
+  
+</footer>
+
+
+  <!-- SCRIPTS -->
+  
+  <script  src="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js" ></script>
+<script  src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+<!-- Plugins -->
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+  
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/tocbot@4.12.2/dist/tocbot.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/anchor-js@4.3.0/anchor.min.js" ></script>
+
+
+
+  <script defer src="https://cdn.jsdelivr.net/npm/clipboard@2.0.8/dist/clipboard.min.js" ></script>
+
+
+
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11/lib/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var title = document.getElementById('subtitle').title;
+      
+      typing(title)
+      
+    })(window, document);
+  </script>
+
+
+
+  <script  src="/js/local-search.js" ></script>
+  <script>
+    (function () {
+      var path = "/local-search.xml";
+      $('#local-search-input').on('click', function() {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      });
+      $('#modalSearch').on('shown.bs.modal', function() {
+        $('#local-search-input').focus();
+      });
+    })()
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+
+
+
+<!-- 主题的启动项 保持在最底部 -->
+<script  src="/js/boot.js" ></script>
+
+
+</body>
+</html>

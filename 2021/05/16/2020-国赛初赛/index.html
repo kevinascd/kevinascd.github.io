@@ -1,0 +1,473 @@
+
+
+<!DOCTYPE html>
+<html lang="en" data-default-color-scheme=&#34;auto&#34;>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/favicon.png">
+  <link rel="icon" href="/img/favicon.png">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="description" content="This is my blog.I will write down what I know">
+  <meta name="author" content="Kevin">
+  <meta name="keywords" content="">
+  
+  <title>关于微表情的一些看法 - Welcome to my world</title>
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" />
+
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/github-markdown-css@4.0.0/github-markdown.min.css" />
+  <link  rel="stylesheet" href="/lib/hint/hint.min.css" />
+
+  
+    
+    
+      
+      <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10.6.0/styles/github-gist.min.css" />
+    
+  
+
+  
+    <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+  
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_ba1fz6golrf.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_kmeydafke9r.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    var CONFIG = {"hostname":"kevinascd.github.io","root":"/","version":"1.8.10","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null}}};
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+
+<body>
+  <header style="height: 70vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand"
+       href="/">&nbsp;<strong>Know More, For The Better Fature </strong>&nbsp;</a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                Home
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                Archives
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                Categories
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                Tags
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                About
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" data-toggle="modal" data-target="#modalSearch">&nbsp;<i
+                class="iconfont icon-search"></i>&nbsp;</a>
+          </li>
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="banner" id="banner" parallax=true
+         style="background: url('/img/default.png') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="page-header text-center fade-in-up">
+            <span class="h2" id="subtitle" title="关于微表情的一些看法">
+              
+            </span>
+
+            
+              <div class="mt-3">
+  
+  
+    <span class="post-meta">
+      <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+      <time datetime="2021-05-16 19:38" pubdate>
+        May 16, 2021 pm
+      </time>
+    </span>
+  
+</div>
+
+<div class="mt-1">
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-chart"></i>
+      2.8k 字
+    </span>
+  
+
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-clock-fill"></i>
+      
+      
+      27
+       分钟
+    </span>
+  
+
+  
+  
+</div>
+
+            
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none">关于微表情的一些看法</h1>
+            
+            <div class="markdown-body">
+              <p>　　一个2010年的实验专门调查了收看Lie to Me 的观众，对比了他们和一般人的测谎能力是否存在区别。结果表明，在所有的被试中，那些努力运用从Lie to Me学到的测谎技巧的观众，判断对方是否说谎的平均准确率达到60%，而一般人的准确率为65%。这两个数据说明，通过Lie to Me自学测谎的观众，与普通人的测谎能力并没有什么不同。（所以，大家最好还是抱着娱乐的心态，看看就好。）</p>
+<p>　　Aamodt 和Custer则研究了那些专门接受过微表情／肢体语言观解读训练的警察，发现他们其实与普通人一样，有着大概50%的判断准确率，他们只是比一般人更相信自己有看穿谎言的能力罢了。</p>
+<p>　　为什么辨别微表情并不可靠呢？这是因为，这些技巧大多聚焦于肢体语言或面部表情的异常特征，譬如脸微微泛红，局促地笑，或者较高频率的眨眼。这些研究都存在着一个假设，即对于不同的人来说，撒谎的行为会不由自主地激发一些情绪，并表现出相似的身体反应特征。正如Ekman博士的理论提出的：“人们说谎时的特征具有普遍性。”</p>
+<p>　　但实际上，心理学家们后来发现，这些看似可靠的特征其实不太管用。有的人说谎就紧张得笑出声，有的人却会脸部紧绷；有的人说谎时会与你对视，有的人却眼神闪烁。——也就是说，从来都不存在一部有关肢体语言的辞典，能够在普遍意义上定义出人们的表情代表了什么。Thomas Ormerod指出：“每个人说谎时的小动作都是不一样的。”而且，在一些特殊的情境下（譬如在警察局接受审讯，或者面临多人质询时），人们可能会表现出异常的肢体语言，只是为了减轻心理上的压力。因此，那些通过微表情来识别谎言的技巧其实太过绝对了。</p>
+<p>　　那么，真正的FBI是如何测谎的？</p>
+<p>　　研究者认为，尽管我们不能通过微表情和肢体语言来看穿谎言，却可以用谈话的方式来得到我们想要的答案。伍尔弗汉普顿大学的Ormerod和Coral Dando列出了以下几种可以用来识别谎言者的谈话技巧，这些方法都已经在实际的FBI和警方的审讯过程中得到运用。</p>
+<p>　　１．多问一些开放式的问题。<br>因为撒谎者只是暗示了一个广泛的故事框架，他们的描述往往缺乏细节，因此，让他们开放地描述更容易露出破绽。不要使用是非题，一段故事中的漏洞会比单纯的“是”或“否”更容易被识别。</p>
+<p>比如说，当你怀疑男朋友晚上去打游戏时，不要问他：“你晚上去打LOL了吗？”，而是换一种方式来问：“你晚上都干了些什么？”。当对方说自己在xx大学工作，而你表示怀疑时，你可以让对方介绍一下自己每天去上班的路途，和在大学工作的经历。</p>
+<p>假如对方打算说谎，那么接下来他就必须得编故事。而在编织谎言的过程中，他极有可能会被自己的谎言给绕进去，也就是我们所说的“一个谎言要用千百个谎言来修补”。</p>
+<p>　　２．问一些让对方出其不意的问题，或让对方使用倒叙。<br>英国朴次茅斯大学的社会心理学家Aldert Vrij运用了“认知负荷”理论来改良审讯方法。这一理论是说，无论人类大脑能处理的信息量是多么巨大，对我们中的大多数人来说，在某一时间点都只能进行有限的思考，在同一时间段内的认知资源（cognitive resources）是有限的，我们很难“一心二用”。</p>
+<p>所以，如果在一般的思维过程之外增加额外的“思考”，就会产生认知负荷（cognitive load），用通俗的话来说就是“费脑子”。举个例子，当一个人一边开车一边打电话的时候，如果认知资源大部分用在了打电话上，放在开车上的认知资源不够，就容易导致事故发生。</p>
+<p>应用在测谎上，撒谎者在应对他人的询问时，就处在“一心二用”的状态，不但要编造故事，还要考虑措辞，他们非常担心所编造故事的一贯性，所以倾向于反复使用那些考虑好了的字眼和语句。这样，我们就可以通过问一些无关的、在对方意料之外的问题，这些问题能够分散对方的认知资源，增加对方的认知负荷，从而使得对方难以维持谎言的逻辑性。譬如，跳出案件过程本身，突然询问嫌疑人在案件发生时的感官体验，或者了解案件之后所做的事。这些技巧会让对方更容易原形毕露。</p>
+<p>关于增大认知负荷，还有一个很好用的技巧就是：让对方用倒叙的方法来叙述事件的经过。这对说谎者来说是一种陌生的叙事方式，会极大地增加认知负荷，当对方费劲地倒叙时，再去编织谎言就显得很困难，容易自相矛盾。</p>
+<p>这一点已在实验室中得到证明。Aldert Vrij曾做过一个实验，其中说谎者和说真话者各占一半，他们被要求以倒叙的方式复述他们的说法。之后，同一批观察者观看了记录整个问询过程的录像带，并对这些说法的真实性进行评估。如果说谎者平铺直叙，谎言被辨识出的正确率只有42%——甚至在平均值之下。但如果说谎者是在倒叙，谎言被辨识的准确率会大大提高，达到60%。</p>
+<p>　　３．观察对方的自信度，适时发出挑战。<br>当说谎者认为他们掌握了主动权的时候，他们往往会长篇大论。然而，一旦他们感觉到不对劲（或许你问到了关键的地方），他们就会变得沉默或者支支吾吾，这是因为，他们开始感觉到无法继续掌控对话的发展方向，所以不愿意多说。</p>
+<p>　　所以，在谈话过程中，如果对方出现了比较明显的态度转变，我们就要考虑对方是否在说谎了。在谈话的最后，你可以尝试挑战对方的信心：“为什么我该相信你？”无论对方说了什么，再问一遍同样的问题，“你还是没有回答我，我为什么应该相信你？”接下来，再仔细聆听应答。有人可能会表示，自己所说的都是真相，而撒谎者极有可能会表现过度，气急败坏地指责你不愿意相信他们，甚至扬言用人格担保。这时，你就可以进行进一步的细节追问。</p>
+<p>　　４．关注和确认对方叙述中微小的细节。<br>你可能还记得，当警察想知道嫌疑人与一个案子是否有关时，一般会问：“xx日xx时你在什么地方，干了什么”，然后通过查证证词的真实性，来判断嫌疑人的可靠性。如果嫌疑人在一些细节上出了错，那么他的证词就会露出破绽。</p>
+<p>而在生活中，当你的男/女朋友说晚上在加班的时候——你就可以问：“谁在陪你一起加班？你们叫了哪家外卖？加班从几点到几点？”这些细节很容易就能通过调查来证实。</p>
+<p>　　５．“放长线钓大鱼”，不要急于拆穿。<br>有研究者认为，撒谎者是否能够欺骗成功，依赖于他的听众是否愿意相信Ta。因此，如果你很快就发现了一处逻辑上的矛盾，也可以不要立即拆穿或纠正，而是假装自己已经相信，这样，撒谎者可能会抖露出更多的破绽，出现一个接一个的矛盾。</p>
+<p>　　最难识别的撒谎者，是自己都信以为真的人</p>
+<p>　　上述谈话技巧的有效性在实验和现实中都得到了充分检验。Ormerod在机场安检人员那里做了一个实验：他们准备了一些假的“旅客”，用一个星期的时间编造他们的行程，然后去到机场，与其他真的旅客一起排队接受盘查。当这些“旅客”被盘问的时候，就会说出自己编造的行程试图骗过工作人员。事实表明，使用以上谈话技巧训练的工作人员，判断对方为真假旅客的准确率，比使用肢体语言作为标准的工作人员的准确率高出20倍，能够排查出70%的“假旅客”。</p>
+<p>　　而在对真正的联邦调查员的研究中，当探员们通过策略性的问题引导对方讲故事，而不去刻意关注肢体语言时，这些探员能够以平均90%的准确度成功识别出作弊者，其中有人甚至达到了100%的准确度。追踪研究表明，即使是新上手不久的探员，也能够做到80%的成功预测。</p>
+<p>　　研究者认为，说到底，有效运用这些技巧的关键要求的是提问者保持开放的心态，切勿跳入预先设定的结论之中。仅仅因为有些人看起来手足无措，或是极力回想起某些细节，并不能够证明他们有罪；相反，更普遍的不一致性和矛盾之处才是我们考察的重点。</p>
+<p>　　不过，有趣的是，很多老练的撒谎者更有可能识别出别人的谎言。伦敦大学学院的研究者Geoffrey Bird及其同事设计了一个实验，让被试在游戏中识别彼此是否在说谎。结果证明，那些平日里关于扯谎的人更能发现谁在吹牛，可能是因为他们更熟悉那些撒谎的把戏。</p>
+<p>　　最后，最难识别的撒谎者是什么样的？是那些自己都信以为真的人。对于这样的人，上述的识别方法可能都完全不能奏效，因为他们已经活在了谎言里。</p>
+
+            </div>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                
+              </div>
+              
+                <p class="note note-warning">
+                  
+                    本博客所有文章除特别声明外，均采用 <a target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" rel="nofollow noopener noopener">CC BY-SA 4.0 协议</a> ，转载请注明出处！
+                  
+                </p>
+              
+              
+                <div class="post-prevnext">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/2021/06/13/%E6%95%B0%E6%8D%AE%E6%8C%96%E6%8E%98/">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">数据挖掘概要</span>
+                        <span class="visible-mobile">Previous</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2021/05/13/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E5%B8%B8%E7%94%A8%E6%95%B0%E5%AD%A6%E7%9F%A5%E8%AF%86/">
+                        <span class="hidden-mobile">深度学习常用数学知识</span>
+                        <span class="visible-mobile">Next</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
+    </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;TOC</p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+
+    
+
+    
+      <a id="scroll-top-button" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">Search</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">keyword</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+
+    
+  </main>
+
+  <footer class="text-center mt-5 py-3">
+  <div class="footer-content">
+     <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+  </div>
+  
+
+  
+
+  
+</footer>
+
+
+  <!-- SCRIPTS -->
+  
+  <script  src="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js" ></script>
+<script  src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+<!-- Plugins -->
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+  
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/tocbot@4.12.2/dist/tocbot.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/anchor-js@4.3.0/anchor.min.js" ></script>
+
+
+
+  <script defer src="https://cdn.jsdelivr.net/npm/clipboard@2.0.8/dist/clipboard.min.js" ></script>
+
+
+
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11/lib/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var title = document.getElementById('subtitle').title;
+      
+      typing(title)
+      
+    })(window, document);
+  </script>
+
+
+
+  <script  src="/js/local-search.js" ></script>
+  <script>
+    (function () {
+      var path = "/local-search.xml";
+      $('#local-search-input').on('click', function() {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      });
+      $('#modalSearch').on('shown.bs.modal', function() {
+        $('#local-search-input').focus();
+      });
+    })()
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+
+
+
+<!-- 主题的启动项 保持在最底部 -->
+<script  src="/js/boot.js" ></script>
+
+
+</body>
+</html>
